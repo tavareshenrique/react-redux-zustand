@@ -1,19 +1,22 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
+import { useSelector } from "react-redux";
+import type { TypedUseSelectorHook } from "react-redux";
+
 const todoSlice = createSlice({
   name: 'todo',
   initialState: ['Fazer Café', 'Estudar Redux', 'Ler um Livro'] as string[],
   reducers: {
-    addTodo: (state, action) => {
-      state.push(action.payload);
+    add: (state, action) => {
+      state.push(action.payload.newTodo);
     },
-    removeTodo: (state, action) => {
+    remove: (state, action) => {
       return state.filter((_, index) => index !== action.payload);
     },
   },
 });
 
-export const { addTodo, removeTodo } = todoSlice.actions;
+export const { add, remove } = todoSlice.actions;
 
 export const store = configureStore({
   reducer: {
@@ -21,3 +24,6 @@ export const store = configureStore({
   },
 });
 
+export type RootState = ReturnType<typeof store.getState>;
+
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
