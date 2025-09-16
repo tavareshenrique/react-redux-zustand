@@ -18,7 +18,7 @@ export function Player() {
           </button>
         </div>
 
-        <main className="relative flex overflow-hidden border rounded-lg shadow border-zinc-800 bg-zinc-900">
+        <main className="relative flex overflow-hidden border rounded-lg shadow border-zinc-800 bg-zinc-900 pr-80">
           <div className="flex-1">
             <div className="w-full bg-zinc-950 aspect-video">
               <ReactPlayer
@@ -29,7 +29,106 @@ export function Player() {
               />
             </div>
           </div>
-          <aside className="border-l w-80 border-zinc-800 bg-zinc-900">
+
+          <aside className="absolute top-0 bottom-0 right-0 overflow-y-scroll border-l divide-y-2 borde-l divide-zinc-900 w-80 border-zinc-800 bg-zinc-900 scrollbar-thin scrollbar-track-zinc-950 scrollbar-thumb-zinc-800 ">
+            <div>
+              <button
+                className="flex items-center w-full gap-3 p-4 bg-zinc-800"
+              >
+                <div
+                  className="flex items-center justify-center w-10 h-10 text-xs rounded-full bg-zinc-950"
+                >
+                  1
+                </div>
+
+                <div
+                  className="flex flex-col gap-1 text-left"
+                >
+                  <strong className="text-sm">Aula 01 - Boas vindas ao curso!</strong>
+                  <span className="text-xs text-zinc-400">12 aulas</span>
+                </div>
+
+                <ChevronDown className="w-5 h-5 ml-auto text-zinc-400" />
+              </button>
+
+              <nav
+                className="relative flex flex-col gap-4 p-6"
+              >
+                <button
+                  className="flex items-center gap-3 text-sm text-zinc-400"
+                >
+                  <Video  className="w-4 h-4 text-zinc-500" />
+                  <span className="">Fundamentos do Redux</span>
+                  <span className="ml-auto font-mono text-xs text-zinc-500">09:13</span>
+                </button>
+
+                <button
+                  className="flex items-center gap-3 text-sm text-zinc-400"
+                >
+                  <Video  className="w-4 h-4 text-zinc-500" />
+                  <span className="">Fundamentos do Redux</span>
+                  <span className="ml-auto font-mono text-xs text-zinc-500">09:13</span>
+                </button>
+
+                <button
+                  className="flex items-center gap-3 text-sm text-zinc-400"
+                >
+                  <Video  className="w-4 h-4 text-zinc-500" />
+                  <span className="">Fundamentos do Redux</span>
+                  <span className="ml-auto font-mono text-xs text-zinc-500">09:13</span>
+                </button>
+              </nav>
+            </div>
+
+            <div>
+              <button
+                className="flex items-center w-full gap-3 p-4 bg-zinc-800"
+              >
+                <div
+                  className="flex items-center justify-center w-10 h-10 text-xs rounded-full bg-zinc-950"
+                >
+                  1
+                </div>
+
+                <div
+                  className="flex flex-col gap-1 text-left"
+                >
+                  <strong className="text-sm">Aula 01 - Boas vindas ao curso!</strong>
+                  <span className="text-xs text-zinc-400">12 aulas</span>
+                </div>
+
+                <ChevronDown className="w-5 h-5 ml-auto text-zinc-400" />
+              </button>
+
+              <nav
+                className="relative flex flex-col gap-4 p-6"
+              >
+                <button
+                  className="flex items-center gap-3 text-sm text-zinc-400"
+                >
+                  <Video  className="w-4 h-4 text-zinc-500" />
+                  <span className="">Fundamentos do Redux</span>
+                  <span className="ml-auto font-mono text-xs text-zinc-500">09:13</span>
+                </button>
+
+                <button
+                  className="flex items-center gap-3 text-sm text-zinc-400"
+                >
+                  <Video  className="w-4 h-4 text-zinc-500" />
+                  <span className="">Fundamentos do Redux</span>
+                  <span className="ml-auto font-mono text-xs text-zinc-500">09:13</span>
+                </button>
+
+                <button
+                  className="flex items-center gap-3 text-sm text-zinc-400"
+                >
+                  <Video  className="w-4 h-4 text-zinc-500" />
+                  <span className="">Fundamentos do Redux</span>
+                  <span className="ml-auto font-mono text-xs text-zinc-500">09:13</span>
+                </button>
+              </nav>
+            </div>
+
             <div>
               <button
                 className="flex items-center w-full gap-3 p-4 bg-zinc-800"
@@ -79,6 +178,7 @@ export function Player() {
               </nav>
             </div>
           </aside>
+          
         </main>
       </div>
     </div>
