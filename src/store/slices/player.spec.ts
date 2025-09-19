@@ -31,6 +31,7 @@ const EXAMPLE_MOCK_STATE: PlayerState = {
       },
     ],
   },
+  isLoading: false,
   currentLessonIndex: 0,
   currentModuleIndex: 0,
 };
