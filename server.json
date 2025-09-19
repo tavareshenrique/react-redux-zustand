@@ -1,6 +1,8 @@
 {
-  "courses": {
-    "modules": [
+  "courses": [
+    {
+      "id": "1",
+      "modules": [
       {
         "id": "1",
         "title": "Iniciando com React",
@@ -24,5 +26,6 @@
         ]
       }
     ]
-  }
+    }
+  ]
 }
