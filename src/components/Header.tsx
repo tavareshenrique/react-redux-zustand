@@ -3,6 +3,10 @@ import { useCurrentLesson } from "../store/slices/player";
 export function Header() {
   const lesson = useCurrentLesson();
 
+  if (!lesson.currentLesson || !lesson.currentModule) {
+    return null;
+  }
+
   return (
     <div className="flex flex-col gap-1">
       <h1 className="text-2xl font-bold">{lesson.currentLesson.title}</h1>
